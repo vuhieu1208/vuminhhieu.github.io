@@ -1,0 +1,70 @@
+/*# import fonts*/
+@import 'fonts';
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:YuGothR,HiraKakuPro,meiryo, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+.wrap-page{
+    max-width: 950px;
+    margin: 0 auto;
+}
+.center
+{
+     text-align: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.container{
+    flex-direction: column;
+     display: flex;
+     flex-wrap: wrap;
+}
+@for $i from 1 through 12{
+    .col-#{$i}{
+        flex: 0 0 (100%*$i/12);
+        max-width: (100%*$i/12);
+    }
+}
+#top{
+    background-color: #006699;
+    height: 4px;
+
+}
+@media only screen and (max-width: 1150px) {
+   .page-top{
+       display: none !important;
+   }
+}
+#top,.header-mainnav,.mainimage,.contents,.footer,.tv-mainimage,.tv-contents{min-width: 950px;}
+$font-d:'DINBold';
+$font-m:'meiryo';
+$font-mb:'meiryob';
+$font-sd:'ShinGoPro-DeBold';
+$font-sr:'ShinGoPro-Regular';
+$font-sm:'ShinGoPro-Medium';
+$font-hira-w3:'HiraKakuProN-W3';
+/*# import header*/
+@import 'header';
+/*# import mainNav*/
+@import 'mainNav';
+/*# import mainImage*/
+@import 'mainImage';
+/*# import content*/
+@import 'content';
+/*# import footer*/
+@import 'footer';
+/*# responsive*/
+@import 'responsive';
+/*# import tv-mainimage*/
+@import 'tv-mainimage';
+/*# import tv-contents*/
+@import 'tv-contents';
+
